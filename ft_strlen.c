@@ -6,7 +6,7 @@
 /*   By: btrainor <btrainor@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/25 17:51:21 by btrainor          #+#    #+#             */
-/*   Updated: 2026/09/25 17:57:56 by btrainor         ###   ########.fr       */
+/*   Updated: 2026/09/28 15:58:21 by btrainor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strlen(char *s)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	while (s[len] != '\0')
