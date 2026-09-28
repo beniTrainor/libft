@@ -6,7 +6,7 @@
 /*   By: btrainor <btrainor@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/25 17:14:21 by btrainor          #+#    #+#             */
-/*   Updated: 2026/09/25 17:17:11 by btrainor         ###   ########.fr       */
+/*   Updated: 2026/09/28 15:59:17 by btrainor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isprint(int c)
 {
-	return ((c >= ' ' && c <= '~'));	
+	return ((c >= ' ' && c <= '~'));
 }
 
 int	main(void)
