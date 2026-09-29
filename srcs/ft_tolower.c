@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: btrainor <btrainor@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/29 15:41:44 by btrainor          #+#    #+#             */
-/*   Updated: 2026/09/29 15:48:45 by btrainor         ###   ########.fr       */
+/*   Created: 2026/09/29 15:50:15 by btrainor          #+#    #+#             */
+/*   Updated: 2026/09/29 16:10:15 by btrainor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <assert.h>
-
-int	islower(int c)
+int	ft_isupper(int c)
 {
-	return (c >= 'a' && c <= 'z');
+	return (c >= 'A' && c <= 'Z');
 }
 
-int	toupper(int c)
+int	ft_tolower(int c)
 {
-	if (islower(c))
-		return (c - ('a' - 'A'));
+	if (ft_isupper(c))
+		return (c + ('a' - 'A'));
 	return (c);
 }
-
-//int	main(void)
-//{
-//	assert(islower('a') == 1);
-//	assert(islower('A') == 0);
-//	assert(toupper('a') == 'A');
-//	assert(toupper('Z') == 'Z');
-//	assert(toupper('$') == '$');
-//}
