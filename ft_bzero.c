@@ -6,17 +6,16 @@
 /*   By: btrainor <btrainor@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/28 16:14:16 by btrainor          #+#    #+#             */
-/*   Updated: 2026/09/28 18:11:43 by btrainor         ###   ########.fr       */
+/*   Updated: 2026/09/29 14:52:05 by btrainor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 //#include <assert.h>
 
-
 void	ft_bzero(void *s, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)
