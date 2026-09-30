@@ -6,15 +6,16 @@
 /*   By: btrainor <btrainor@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/25 17:51:21 by btrainor          #+#    #+#             */
-/*   Updated: 2026/09/28 15:58:21 by btrainor         ###   ########.fr       */
+/*   Updated: 2026/09/30 15:40:37 by btrainor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <assert.h>
+#include <string.h>
 
-int	ft_strlen(char *s)
+size_t	ft_strlen(char *s)
 {
-	int	len;
+	size_t	len;
 
 	len = 0;
 	while (s[len] != '\0')
