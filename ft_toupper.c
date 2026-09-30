@@ -6,11 +6,9 @@
 /*   By: btrainor <btrainor@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 15:41:44 by btrainor          #+#    #+#             */
-/*   Updated: 2026/09/29 17:09:23 by btrainor         ###   ########.fr       */
+/*   Updated: 2026/09/30 18:06:08 by btrainor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <assert.h>
 
 static int	islower(int c)
 {

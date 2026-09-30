@@ -1,16 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: btrainor <btrainor@student.42barcelon      +#+  +:+       +#+        */
+/*   By: btrainor <btrainor@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/25 16:57:58 by btrainor          #+#    #+#             */
-/*   Updated: 2026/09/30 19:07:19 by btrainor         ###   ########.fr       */
+/*   Created: 2026/09/29 17:51:51 by btrainor          #+#    #+#             */
+/*   Updated: 2026/09/30 18:59:15 by btrainor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+size_t	ft_strlcpy(char *dst, const char *src, size_t siz)
 {
-	return ((unsigned char)c >= '\0' && (unsigned char)c <= '\x7F');
+	int	i;
+
+	i = 0;
+	while (i < siz - 1)
+	{
+		i++;
+	}
+	
 }
