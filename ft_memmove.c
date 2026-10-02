@@ -10,41 +10,27 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t	i;
+    size_t i;
 
+    if (dest < src)
+    {
 	i = 0;
 	while (i < n)
 	{
-		((int *)dest)[i] = ((int *)src)[i];
-		i++;
+	    ((char *)dest)[i] = ((char *)src)[i];
+	    i++;
 	}
-	return (dest);
-}
-
-void	*ft_memmove(void *dest, const void *src, size_t n)
-{
-	void *temp;
-
-	temp = malloc(sizeof(void *) * n);
-	ft_memcpy(temp, src, n);
-	ft_memcpy(dest, temp, n);
-	free(temp);
-	return (dest);
-}
-
-int	main(void)
-{
-	char	*str = "Hello";
-	const void *src;
-	void *dest;
-
-	*src = (const void*) &str;
-	dest = malloc(sizeof(void *) * 6);
-	ft_memmove(dest, src, 6);	
-	free(dest);
+    }
+    else
+    {
+	i = n;
+	while (i > 0)
+	{
+	    ((char *)dest)[i - 1] = ((char *)src)[i - 1];
+	    i--;
+	}
+    }
+    return (dest);
 }
