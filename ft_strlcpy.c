@@ -10,14 +10,30 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
+
+static size_t	ft_strlen(const char *s)
+{
+	size_t	len;
+
+	len = 0;
+	while (s[len] != '\0')
+		len++;
+	return (len);
+}
+
 size_t	ft_strlcpy(char *dst, const char *src, size_t siz)
 {
-	int	i;
+	size_t	i;
 
-	i = 0;
-	while (i < siz - 1)
+	if (siz == 0)
+	    return (ft_strlen(src));
+	i = 1;
+	while ((i < siz) && src[i - 1] != '\0')
 	{
-		i++;
+	    dst[i - 1] = src[i - 1];
+	    i++;
 	}
-	
+	dst[i - 1] = '\0';
+	return (ft_strlen(src));
 }
