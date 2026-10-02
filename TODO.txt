@@ -1,0 +1,2 @@
+- remove header files. Include them in the main header file (libft.h).
+- add 42 header in files created in personal computer.
