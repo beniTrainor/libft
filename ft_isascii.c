@@ -12,5 +12,5 @@
 
 int	ft_isascii(int c)
 {
-	return ((unsigned char)c >= '\0' && (unsigned char)c <= '\x7F');
+	return (c >= 0 && c <= 127);
 }
