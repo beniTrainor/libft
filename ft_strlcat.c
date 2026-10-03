@@ -19,7 +19,6 @@ static size_t	ft_strlen(const char *s)
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
     size_t  i;
-    size_t  j;
     size_t  destlen;
 
     i = 0;
@@ -28,12 +27,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
     destlen = i;
     if (destlen == size)
 	return (size + ft_strlen(src));
-    j = 0;
-    while ((i < size) && src[j] != '\0')
+    while ((i < size) && src[i - destlen] != '\0')
     {
-	dst[i] = src[j];
+	dst[i] = src[i - destlen];
 	i++;
-	j++;
     }
     dst[i] = '\0';
     return (destlen + ft_strlen(src));
