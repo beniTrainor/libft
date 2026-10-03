@@ -1,10 +1,4 @@
-static size_t	min(size_t a, size_t b)
-{
-    if (a < b)
-	return (a);
-    else
-	return (b);
-}
+#include <stddef.h>
 
 static size_t	ft_strlen(const char *s)
 {
