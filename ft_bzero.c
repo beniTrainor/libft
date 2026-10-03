@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-//#include <assert.h>
 
 void	ft_bzero(void *s, size_t n)
 {
@@ -24,16 +23,3 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-
-//int	main(void)
-//{
-//	void *s = malloc(10);
-//	if (s == NULL)
-//		return (0);	
-//	((int *)s)[0] = 12;
-//	((int *)s)[1] = 32;
-//	ft_bzero(s, 2);
-//	assert(((char *)s)[0] == '\0');
-//	assert(((char *)s)[1] == '\0');
-//	free(s);
-//}
