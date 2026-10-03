@@ -46,27 +46,20 @@ char	*ft_reverse(char *s)
     return (s);
 }
 
-char	*ft_itoa(int n)
+char 	*ft_fill(char *s, long nl)
 {
-    char *s;
-    int	len;
+    int	sign;
     int	i;
-    int sign;
-    long nl;
 
-    nl = n;
-    len = count_digits(n) + 1;
     sign = 1;
     if (nl < 0)
     {
       sign = -1;
       nl *= -1;
-      len++;
     }
-    s = malloc(sizeof(char) * len);
-    i = 0;
-    if (n == 0)
+    else if (nl == 0)
       s[0] = '0';
+    i = 0;
     while (nl > 0)
     {
       s[i++] = nl % 10 + '0';
@@ -75,6 +68,21 @@ char	*ft_itoa(int n)
     if (sign == -1)
       s[i] = '-';
     s[i + 1] = '\0';
+    return (s);
+}
+
+char	*ft_itoa(int n)
+{
+    char *s;
+    int	len;
+    long nl;
+
+    nl = n;
+    len = count_digits(n) + 1;
+    if (nl < 0)
+      len++;
+    s = malloc(sizeof(char) * len);
+    s = ft_fill(s, nl);
     s = ft_reverse(s);
     return (s);
 }
