@@ -30,23 +30,11 @@ char	*ft_strtrim(char const *s1, char const *set)
     size_t  len;
 
     len = ft_strlen(s1);
-    if (len == 0)
-    {
-      res = malloc(1);
-      if (res == NULL)
-	    return (NULL);
-      res[0] = '\0';
-      return (res);
-    }
     i = 0;
     while (i < len && is_in_set(s1[i], set))
       i++;
     start = i;
-    i = len - 1;
-    while (i > 0 && is_in_set(s1[i], set))
-      i--;
-    end = i;
-    if (start == len && end == 0)
+    if (start == len)
     {
       res = malloc(1);
       if (res == NULL)
@@ -54,6 +42,10 @@ char	*ft_strtrim(char const *s1, char const *set)
       res[0] = '\0';
       return (res);
     }
+    i = len - 1;
+    while (i > 0 && is_in_set(s1[i], set))
+      i--;
+    end = i;
     res = malloc(sizeof(char) * (len - start - (len - end - 1) + 1));
     if (res == NULL)
 	return (NULL);
