@@ -6,7 +6,7 @@
 /*   By: btrainor <btrainor@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 18:26:52 by btrainor          #+#    #+#             */
-/*   Updated: 2026/10/05 18:27:43 by btrainor         ###   ########.fr       */
+/*   Updated: 2026/10/05 20:01:42 by btrainor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,18 @@ static size_t	ft_strlen(const char *s)
 	return (len);
 }
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t siz)
 {
 	size_t	i;
 	size_t	destlen;
 
 	i = 0;
-	while (i < size && dst[i] != '\0')
+	while (i < siz && dst[i] != '\0')
 		i++;
 	destlen = i;
-	if (destlen == size)
-		return (size + ft_strlen(src));
-	while ((i < size) && src[i - destlen] != '\0')
+	if (destlen == siz)
+		return (siz + ft_strlen(src));
+	while ((i < siz) && src[i - destlen] != '\0')
 	{
 		dst[i] = src[i - destlen];
 		i++;
