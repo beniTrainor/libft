@@ -6,11 +6,11 @@
 /*   By: btrainor <btrainor@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 17:14:16 by btrainor          #+#    #+#             */
-/*   Updated: 2026/10/16 17:14:54 by btrainor         ###   ########.fr       */
+/*   Updated: 2026/10/16 17:37:00 by btrainor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {

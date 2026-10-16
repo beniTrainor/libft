@@ -6,11 +6,11 @@
 /*   By: btrainor <btrainor@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 18:02:19 by btrainor          #+#    #+#             */
-/*   Updated: 2026/10/05 18:06:47 by btrainor         ###   ########.fr       */
+/*   Updated: 2026/10/16 17:34:11 by btrainor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 int	count_digits(int n)
 {
