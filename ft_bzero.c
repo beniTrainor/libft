@@ -6,11 +6,9 @@
 /*   By: btrainor <btrainor@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/28 16:14:16 by btrainor          #+#    #+#             */
-/*   Updated: 2026/09/29 14:52:05 by btrainor         ###   ########.fr       */
+/*   Updated: 2026/10/16 17:32:44 by btrainor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdlib.h>
 
 void	ft_bzero(void *s, size_t n)
 {
