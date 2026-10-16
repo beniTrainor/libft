@@ -6,7 +6,7 @@
 /*   By: btrainor <btrainor@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 19:31:20 by btrainor          #+#    #+#             */
-/*   Updated: 2026/10/16 20:19:20 by btrainor         ###   ########.fr       */
+/*   Updated: 2026/10/16 20:38:27 by btrainor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ static size_t	count_tokens(char const *s, char c)
 	{
 		if (*s != c)
 		{
-			count++;	
+			count++;
 			while (*s != c && *s != '\0')
-				s++;	
+				s++;
 		}
 		else
 			s++;
@@ -31,7 +31,7 @@ static size_t	count_tokens(char const *s, char c)
 	return (count);
 }
 
-static void	free_substrings(char **subs, size_t count)
+static char	**free_substrings(char **subs, size_t count)
 {
 	size_t	i;
 
@@ -42,18 +42,15 @@ static void	free_substrings(char **subs, size_t count)
 		i++;
 	}
 	free(subs);
+	return (NULL);
 }
 
-static char		**create_substrings(char const *s, char c, size_t count)
+static char	**create_substrings(char const *s, char c, char **res, size_t count)
 {
-	char	**res;
 	int		i;
 	int		j;
 	int		k;
 
-	res = malloc(sizeof(char *) * (count + 1));
-	if (res == NULL)
-		return (NULL);
 	i = 0;
 	k = 0;
 	while (s[i] != '\0')
@@ -65,10 +62,7 @@ static char		**create_substrings(char const *s, char c, size_t count)
 				j++;
 			res[k] = ft_substr(s, i, j - i);
 			if (res[k] == NULL)
-			{
-				free_substrings(res, k);
-				return (NULL);
-			}	
+				return (free_substrings(res, k));
 			k++;
 			i = j;
 		}
@@ -87,6 +81,9 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	count = count_tokens(s, c);
-	res = create_substrings(s, c, count);
+	res = malloc(sizeof(char *) * (count + 1));
+	if (res == NULL)
+		return (NULL);
+	res = create_substrings(s, c, res, count);
 	return (res);
 }
