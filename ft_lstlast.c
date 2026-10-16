@@ -6,17 +6,11 @@
 /*   By: btrainor <btrainor@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 20:22:33 by btrainor          #+#    #+#             */
-/*   Updated: 2026/10/13 20:33:11 by btrainor         ###   ########.fr       */
+/*   Updated: 2026/10/16 17:17:05 by btrainor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-
-typedef struct	s_list
-{
-	void	*content;
-	struct	s_list *next;
-}				t_list;
 
 t_list	*ft_lstlast(t_list *lst)
 {
@@ -24,5 +18,5 @@ t_list	*ft_lstlast(t_list *lst)
 		return (NULL);
 	while (lst->next != NULL)
 		lst = lst->next;
-	return (lst);	
+	return (lst);
 }
