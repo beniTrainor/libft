@@ -6,22 +6,11 @@
 /*   By: btrainor <btrainor@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 18:08:43 by btrainor          #+#    #+#             */
-/*   Updated: 2026/10/05 18:09:52 by btrainor         ###   ########.fr       */
+/*   Updated: 2026/10/16 17:40:38 by btrainor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	len;
-
-	len = 0;
-	while (s[len] != '\0')
-		len++;
-	return (len);
-}
+#include "libft.h"
 
 static void	ft_strcpy(char *dst, const char *src)
 {

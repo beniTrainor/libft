@@ -6,15 +6,11 @@
 /*   By: btrainor <btrainor@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/09 18:39:14 by btrainor          #+#    #+#             */
-/*   Updated: 2026/10/09 19:00:55 by btrainor         ###   ########.fr       */
+/*   Updated: 2026/10/16 17:38:56 by btrainor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
-
-char	*ft_itoa(int n);
-void	ft_putstr_fd(char *s, int fd);
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
