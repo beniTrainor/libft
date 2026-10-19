@@ -6,7 +6,7 @@
 /*   By: btrainor <btrainor@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 17:48:52 by btrainor          #+#    #+#             */
-/*   Updated: 2026/10/16 18:25:50 by btrainor         ###   ########.fr       */
+/*   Updated: 2026/10/19 17:34:32 by btrainor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	sslen;
 
 	slen = ft_strlen(s);
-	if (start >= slen)	
+	if (start >= slen)
 		return (ft_strdup(""));
 	sslen = slen - start;
 	if (sslen > len)
