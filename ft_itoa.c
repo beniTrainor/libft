@@ -6,13 +6,13 @@
 /*   By: btrainor <btrainor@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 18:02:19 by btrainor          #+#    #+#             */
-/*   Updated: 2026/10/16 17:34:11 by btrainor         ###   ########.fr       */
+/*   Updated: 2026/10/16 18:40:17 by btrainor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_digits(int n)
+static int	count_digits(int n)
 {
 	int	counter;
 
@@ -29,17 +29,7 @@ int	count_digits(int n)
 	return (counter);
 }
 
-static size_t	ft_strlen(const char *s)
-{
-	size_t	len;
-
-	len = 0;
-	while (s[len] != '\0')
-		len++;
-	return (len);
-}
-
-char	*ft_reverse(char *s)
+static char	*ft_reverse(char *s)
 {
 	size_t	len;
 	size_t	i;
@@ -57,7 +47,7 @@ char	*ft_reverse(char *s)
 	return (s);
 }
 
-char	*ft_fill(char *s, long nl)
+static char	*ft_fill(char *s, long nl)
 {
 	int	sign;
 	int	i;
