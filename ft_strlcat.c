@@ -28,6 +28,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t siz)
 		dst[i] = src[i - destlen];
 		i++;
 	}
-	dst[i] = '\0';
+	if (i < siz && src[i - destlen] == '\0')
+	    dst[i] = '\0';
+	else
+	    dst[i - 1] = '\0';
 	return (destlen + ft_strlen(src));
 }
