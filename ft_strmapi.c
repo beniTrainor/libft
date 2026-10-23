@@ -6,7 +6,7 @@
 /*   By: btrainor <btrainor@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 18:11:24 by btrainor          #+#    #+#             */
-/*   Updated: 2026/10/16 17:42:58 by btrainor         ###   ########.fr       */
+/*   Updated: 2026/10/23 18:41:56 by btrainor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	len = ft_strlen(s);
 	m = malloc(sizeof(char) * (len + 1));
+	if (m == NULL)
+		return (NULL);
 	i = 0;
 	while (i < len)
 	{
