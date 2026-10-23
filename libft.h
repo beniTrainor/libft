@@ -6,9 +6,12 @@
 /*   By: btrainor <btrainor@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 13:31:43 by btrainor          #+#    #+#             */
-/*   Updated: 2026/10/23 13:49:34 by btrainor         ###   ########.fr       */
+/*   Updated: 2026/10/23 17:57:50 by btrainor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef LIBFT_H
+# define LIBFT_H
 
 #include <stdlib.h>
 #include <string.h>
@@ -72,3 +75,5 @@ void			ft_lstclear(t_list **lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
+
+#endif
