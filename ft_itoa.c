@@ -83,6 +83,8 @@ char	*ft_itoa(int n)
 	if (nl < 0)
 		len++;
 	s = malloc(sizeof(char) * len);
+	if (s == NULL)
+		return (NULL);
 	s = ft_fill(s, nl);
 	s = ft_reverse(s);
 	return (s);
