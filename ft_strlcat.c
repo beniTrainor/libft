@@ -6,7 +6,7 @@
 /*   By: btrainor <btrainor@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 18:26:52 by btrainor          #+#    #+#             */
-/*   Updated: 2026/10/05 20:01:42 by btrainor         ###   ########.fr       */
+/*   Updated: 2026/10/23 13:29:39 by btrainor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t siz)
 		i++;
 	}
 	if (i < siz && src[i - destlen] == '\0')
-	    dst[i] = '\0';
+		dst[i] = '\0';
 	else
-	    dst[i - 1] = '\0';
+		dst[i - 1] = '\0';
 	return (destlen + ft_strlen(src));
 }
