@@ -6,7 +6,7 @@
 /*   By: btrainor <btrainor@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/09 18:34:32 by btrainor          #+#    #+#             */
-/*   Updated: 2026/10/16 17:43:13 by btrainor         ###   ########.fr       */
+/*   Updated: 2026/10/23 17:43:29 by btrainor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,36 +23,44 @@ static int	is_in_set(const char c, char const *set)
 	return (0);
 }
 
+static size_t	find_start(char const *s1, char const *set)
+{
+	size_t	i;
+
+	i = 0;
+	while (s1[i] != '\0' && is_in_set(s1[i], set))
+		i++;
+	return (i);
+}
+
+static size_t	find_end(char const *s1, char const *set)
+{
+	size_t	i;
+	size_t	len;
+
+	len = ft_strlen(s1);
+	i = len - 1;
+	while (i > 0 && is_in_set(s1[i], set))
+		i--;
+	return (i);
+}
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*res;
 	size_t	start;
 	size_t	end;
 	size_t	i;
-	size_t	len;
 
-	len = ft_strlen(s1);
-	i = 0;
-	while (i < len && is_in_set(s1[i], set))
-		i++;
-	start = i;
-	if (start == len)
-	{
-		res = malloc(1);
-		if (res == NULL)
-			return (NULL);
-		res[0] = '\0';
-		return (res);
-	}
-	i = len - 1;
-	while (i > 0 && is_in_set(s1[i], set))
-		i--;
-	end = i;
-	res = malloc(sizeof(char) * (len - start - (len - end - 1) + 1));
+	start = find_start(s1, set);
+	if (s1[start] == '\0')
+		return (ft_strdup(""));
+	end = find_end(s1, set) + 1;
+	res = malloc(sizeof(char) * (end - start + 1));
 	if (res == NULL)
 		return (NULL);
 	i = start;
-	while (i <= end)
+	while (i < end)
 	{
 		res[i - start] = s1[i];
 		i++;
