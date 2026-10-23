@@ -17,8 +17,10 @@ static int	count_digits(int n)
 	int	counter;
 
 	counter = 0;
-	if (n < 0)
+	if (n < 0 && n > INT_MIN)
 		n *= -1;
+	else if (n == INT_MIN)
+		return (10);
 	while (n > 0)
 	{
 		counter++;
