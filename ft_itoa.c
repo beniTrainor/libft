@@ -6,7 +6,7 @@
 /*   By: btrainor <btrainor@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 18:02:19 by btrainor          #+#    #+#             */
-/*   Updated: 2026/10/16 18:40:17 by btrainor         ###   ########.fr       */
+/*   Updated: 2026/10/23 16:57:12 by btrainor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,10 +79,10 @@ char	*ft_itoa(int n)
 	long	nl;
 
 	nl = n;
-	len = count_digits(n) + 1;
+	len = count_digits(n);
 	if (nl < 0)
 		len++;
-	s = malloc(sizeof(char) * len);
+	s = malloc(sizeof(char) * (len + 1));
 	if (s == NULL)
 		return (NULL);
 	s = ft_fill(s, nl);
