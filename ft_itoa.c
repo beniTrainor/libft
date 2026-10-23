@@ -61,7 +61,11 @@ static char	*ft_fill(char *s, long nl)
 		nl *= -1;
 	}
 	else if (nl == 0)
+	{
 		s[0] = '0';
+		s[1] = '\0';
+		return (s);
+	}
 	i = 0;
 	while (nl > 0)
 	{
@@ -69,8 +73,8 @@ static char	*ft_fill(char *s, long nl)
 		nl /= 10;
 	}
 	if (sign == -1)
-		s[i] = '-';
-	s[i + 1] = '\0';
+		s[i++] = '-';
+	s[i] = '\0';
 	return (s);
 }
 
