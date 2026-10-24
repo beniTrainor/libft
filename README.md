@@ -90,8 +90,10 @@ $ ./programa
 ### Referencias
 
 - Páginas de manual de las funciones de C (`man nombre_funcion`)
-- Repositorios de GitHub de proyectos de libft completados y librería de tests
-	- https://github.com/AlBektur/libft
+- Repositorios de GitHub de proyectos de libft completados:
+	- [AlBektur's libft](https://github.com/AlBektur/libft)
+	- [AliS2018's libft](https://github.com/AliS2018/common-core_42/tree/main/libft)
+	- [apphinha's libft](https://github.com/appinha/42cursus-00-Libft/)
 - Artículos y documentación web:
   - [Void Pointer in C](https://www.geeksforgeeks.org/c/void-pointer-c-cpp/)
   - [memmove() in C/C++](https://www.geeksforgeeks.org/cpp/memmove-in-cc/)
