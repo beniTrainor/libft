@@ -6,16 +6,11 @@
 /*   By: btrainor <btrainor@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 18:16:14 by btrainor          #+#    #+#             */
-/*   Updated: 2026/10/24 15:05:37 by btrainor         ###   ########.fr       */
+/*   Updated: 2026/10/24 15:10:12 by btrainor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	ft_isdigit(int c)
-{
-	return (c >= '0' && c <= '9');
-}
 
 static int	ft_isspace(int c)
 {
