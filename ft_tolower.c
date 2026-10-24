@@ -6,11 +6,11 @@
 /*   By: btrainor <btrainor@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 15:50:15 by btrainor          #+#    #+#             */
-/*   Updated: 2026/09/29 16:10:15 by btrainor         ###   ########.fr       */
+/*   Updated: 2026/10/24 14:57:15 by btrainor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isupper(int c)
+static int	ft_isupper(int c)
 {
 	return (c >= 'A' && c <= 'Z');
 }
