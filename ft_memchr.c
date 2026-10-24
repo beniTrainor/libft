@@ -6,11 +6,11 @@
 /*   By: btrainor <btrainor@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 18:19:41 by btrainor          #+#    #+#             */
-/*   Updated: 2026/10/05 18:20:45 by btrainor         ###   ########.fr       */
+/*   Updated: 2026/10/24 15:05:26 by btrainor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

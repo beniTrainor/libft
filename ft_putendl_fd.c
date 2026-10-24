@@ -6,23 +6,11 @@
 /*   By: btrainor <btrainor@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/09 18:23:41 by btrainor          #+#    #+#             */
-/*   Updated: 2026/10/09 18:28:37 by btrainor         ###   ########.fr       */
+/*   Updated: 2026/10/24 15:01:34 by btrainor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putstr_fd(char *s, int fd)
-{
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		write(fd, &s[i], 1);
-		i++;
-	}
-}
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {
