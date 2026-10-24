@@ -79,6 +79,6 @@ $ cc -Wall -Werror -Wextra file.c libft.a
 
 ### Herramientas de prueba
 
-- My repository de tests: http://github.com/beniTrainor/test-libft
-- https://github.com/Tripouille/libftTester: un repositorio con muchos tests con mucha cobertura de casos para cada función
+- My repository de tests: [http://github.com/beniTrainor/test-libft](http://github.com/beniTrainor/test-libft)
+- [libftTester](https://github.com/Tripouille/libftTester): un repositorio con muchos tests con mucha cobertura de casos para cada función
 - valgrind: herramienta para detectar fugas de memoria y lectura y escritura válida de memoria
